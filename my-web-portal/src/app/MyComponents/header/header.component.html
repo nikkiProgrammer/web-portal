@@ -1,0 +1,19 @@
+<div class="header" *ngIf="!(hasRoute('register') || hasRoute('login'))">
+    <a href="/">
+        <img src="../../../assets/logo.png" alt="" class="logo" width="100" height="100" />
+    </a>
+
+    <div class="btns">
+        <a href="#subscribe" class="subscribe-btn">
+            Subscribe To Updates
+        </a>
+        
+        <div *ngIf="isloggedin">
+            <span>Welcome {{user}}</span>
+            <button  class="login-btn" (click)="onLogout()" >Logout</button>
+        </div>
+        
+        <button   *ngIf="!isloggedin" class="login-btn" routerLink="/login">Login</button>
+        
+    </div>    
+</div>

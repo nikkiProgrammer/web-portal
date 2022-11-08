@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div *ngIf="!(hasRoute('register') || hasRoute('login'))">
+<app-login></app-login>
+<app-subscription></app-subscription>
+<app-status></app-status>
+<app-currentstatus></app-currentstatus>
+<app-maintrafficlight *ngIf="!hasRoute('incident')"></app-maintrafficlight>
+<app-footer></app-footer>
+</div>
+<router-outlet></router-outlet>

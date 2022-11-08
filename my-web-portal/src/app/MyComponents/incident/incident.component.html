@@ -1,0 +1,19 @@
+<div class="incident-container">
+    <div class="head">
+        <h1>Past Incidents</h1>
+        <a routerLink="/" class="back-btn"> Go Back</a>
+    </div>
+    <div class="incident-details" *ngFor="let post of posts">
+        <div>
+            {{post.date}}
+            <hr />
+            <h4>{{post.title}}</h4>
+            <p class="incident-history">{{post.message}}</p>
+            <br />
+        </div>
+        
+        <div *ngIf="!check">
+            <h4>{{usermessage}}</h4>  
+        </div>
+    </div>
+</div>

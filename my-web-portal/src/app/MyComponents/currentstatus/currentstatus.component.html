@@ -1,0 +1,35 @@
+<div class="current-form" id="current">
+    <form (ngSubmit)="onSubmit()" [formGroup]="postForm" >
+        <a href="#" class="close-btn">
+            x
+        </a>
+        <div class="announcement-data">
+            <label>Date</label>
+            <input
+                type="date"
+                class="issue"
+                placeholder="Select Date here"
+                formControlName="date"/>
+        </div>
+        <div class="announcement-data">
+            <label>Title</label>
+            <textarea
+                rows="2"
+                cols="20"
+                placeholder="type here incident title"
+                formControlName="title"></textarea>
+        </div>
+        <div class="announcement-data">
+            <label>Message</label>
+            <textarea
+                rows="2"
+                cols="20"
+                placeholder="type here incident detail"
+                formControlName="message"></textarea>
+        </div>
+        <div class="btn">
+            <div class="inner"></div>
+            <button type="submit" [disabled]="!postForm.valid">Submit</button>
+        </div>
+    </form>
+</div>
